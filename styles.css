@@ -1,0 +1,637 @@
+.yellow{
+    color: #F2DE35;
+}
+
+.orange{
+    color: #EC6736;
+}
+.blue{
+    color: #2F98D6;
+}
+.violet{
+    color: #7710F1;
+}
+.green{
+    color: #126607;
+}
+
+.white{
+    color: #ffffff;
+}
+
+h1, h2{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Matter, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    
+   
+    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+/* HEADER SECTION */
+
+.header{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+}
+
+.logo{
+    font-size: 1.3em;
+    letter-spacing: 0.02em;
+    font-weight: 100;  
+}
+
+.header-col2{
+    position: relative;
+ 
+}
+
+.nav-holder{
+    display: flex;
+    column-gap: 1em;
+    list-style: none;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    
+}
+
+.nav-item{
+    color: black;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+.navbg{
+    position: absolute;
+    height: 40px;
+    width: 55px;
+    background-color: rgb(0, 0, 0);
+    top: 5px;
+    left: 35px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover{
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+}
+.nav-item.active{
+    color: rgb(255, 255, 255);
+}
+
+.background{
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scrollbar-width: none;
+}
+
+/* LEFT COLUMN SECTION */
+
+
+.left-col{
+    position: fixed;
+    left: 60px;
+    top: 60px;
+    height: calc(100% - 60px);
+    /* width: calc(50% - 60px); */
+    z-index: -1;
+   
+}
+
+.name{
+    margin-top: 50px;
+    font-size: 3.7rem;
+}
+.designation{
+    margin-top: 1px;
+    font-size: 2.618rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #126607;
+}
+
+.info{
+    line-height: 1.3rem;
+    max-width: 550px;
+    font-size: 0.998rem;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    letter-spacing: 0.02rem;
+    margin-bottom: 30px;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 200px;
+    height: 30px;
+    gap: 10px;
+}
+
+.links i{
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    color: black;
+}
+.links i:hover{
+    color: #126607;
+    cursor: pointer;
+    scale: 1.2;
+}
+
+/* COMMAND PROMPT SECTION */
+
+.miniProfile{
+    margin-top: 35px;
+    position: absolute;
+    width: 530px;
+    height: 457px;
+
+    border-radius: 8px;
+    background-color: black;
+    filter: drop-shadow(5px 10px 20px rgba(0,0,0,0.5));
+}
+.miniWindow{
+    height: 40px;
+    width: 100%;
+    background-color: #464545;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: end;
+    
+}
+
+.windowTab{
+    margin-left: 8px;
+    height: 32px;
+    width: 250px;
+    background-color: black;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+   
+}
+.windowTab h3{
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    margin-left: 10px;
+    /* font-family: Helvetica; */
+}
+
+.windowTab i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.6rem;
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+    border: 1px solid white;
+}
+
+.windowTab .xicon{
+    color: white;
+    margin-left: 10px;
+    border: none;
+}
+
+.mainWindow{
+    width: 100%;
+}
+
+.mainWindow h1{
+    color: rgb(231, 231, 231);
+    font-size: 0.95rem;
+    font-weight: 400;
+    /* letter-spacing: 0.05rem; */
+    margin: 8px 0 0 8px;
+    width: 100%;
+    letter-spacing: 0.05rem;
+}
+
+.cmd{
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+}
+.cmd h1{
+    width: 108px;
+    position: absolute;
+}
+
+/* .invisiblePage {
+    left: 0;
+    top: 0;
+    height: 1700px;
+    width: 100%;
+   
+   
+    z-index: 99;
+} */
+
+.page{
+    height: 1700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+} 
+
+/* HOME RESUME SECTION */
+
+.resume-col{
+    height: 1500px;
+    margin-top: 60px;
+    width: calc(50% - 60px);
+    margin-right: 60px;
+    visibility: hidden;  
+    opacity: 0;  
+    pointer-events: none;  
+    transition: opacity 0.3s ease, visibility 1s 10s, pointer-events 0s 1s;
+    z-index: 5; 
+}
+
+.right-col {
+    position: absolute;
+    height: 1500px;
+    margin-top: 60px;
+    width: calc(50% - 60px);
+    margin-right: 60px;
+   
+    visibility: hidden;  
+    opacity: 0;  
+    pointer-events: none;  
+    transition: opacity 0.3s ease, visibility 1s 1s, pointer-events 0s 1s;
+    z-index: 5;
+}
+
+.right-col hr{
+    background-color: black;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 70px 0 0 0;
+}
+
+.showColumn {
+    visibility: visible;  
+    opacity: 1;  
+    pointer-events: auto; 
+    transition: opacity 0.3s ease, visibility 0.5s, pointer-events 0s;
+}
+
+
+
+
+/* PROJECTS SECTION */
+
+.project{
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    /* overflow: auto; */
+    border-bottom: 1px solid currentColor;
+    transition-property: background-color,color, all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.3, 0.1, 0.1, 1);
+    transition-delay: 0s;
+
+}
+.project:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    transition-delay: 0s;
+    color: white;
+}
+
+.project-date {
+    transition: margin-left 0.3s ease;
+}
+
+
+.project::before{
+    content: "";
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0; 
+}
+
+.project-detail{
+    display: flex;
+    gap: 180px;
+}
+.project-detail h1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.project-detail h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* HOME PAGE PROJECTS SECTION */
+.Projects .pjct{
+    margin: 63px 0 21px 0;
+    font-size: 2.618rem;
+}
+.Projects .slct{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.Projects hr{
+    background-color: black;
+    
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 0 0 0px 0;
+}
+
+
+/* EDUCATION SECTION */
+
+.education{
+    margin-top: 62px;
+}
+
+.education h1{
+    font-size: 2.618rem;
+    margin: 0 0 25px 0;
+}
+.education h2{
+    font-size: 1.618rem;
+    font-weight: 400;
+    margin: 0 0 14px 0;
+    
+    
+}
+.education .collegeName{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    /* letter-spacing: 0.05rem; */
+   
+}
+.education .degreeName{
+    font-size: 0.818rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: rgb(54, 54, 54);
+    
+}
+
+.degreePosition{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.eStudiedDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eStudiedDate h1{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.education hr{
+    background-color: black;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+
+/* EXPIRENCE SECTION */
+
+.expirence{
+    margin-top: 62px;
+}
+.expirence h1{
+    font-size: 2.618rem;
+    margin: 0 0 25px 0;
+}
+
+.expirence h2{
+    font-size: 1.618rem;
+    font-weight: 400;
+    margin: 0 0 14px 0;
+}
+
+.expirence .companyName{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.expirence hr{
+    background-color: black;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.companyPosition{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.cPositionDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companyPosition h1{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.companyAchivement ul{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.companyAchivement li{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+    color: rgb(54, 54, 54);
+}
+
+
+/* ABOUT SECTION */
+
+.aboutMe{
+    margin-top: 62px;
+}
+.aboutMe h1{
+    font-size: 2.618rem;
+    margin: 0 0 25px 0;
+}
+.aboutMe h2{
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    width: 700px;
+    line-height: 1.5rem;
+}
+.aboutMe hr{
+    background-color: black;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+
+/* TECH SECTION */
+
+.techStack{
+    margin-top: 62px;
+}
+.techStack h1{
+    font-size: 2.618rem;
+    margin: 0 0 25px 0;
+}
+
+.techSlotHolder{
+    height: 65px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.techSlot{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.techSlot .techLogo{
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.techSlot h1{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+/* END SPACE SECTION */
+
+.emptySpace{
+    height: 63px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
